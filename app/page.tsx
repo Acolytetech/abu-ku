@@ -173,7 +173,7 @@ export default function Home() {
           >
             <h3 className="font-bold text-lg">Get in Touch</h3>
             <p>V2R Vision Advisory and Consulting.</p>
-            <p><span className="font-semibold">Phone:</span> +91 83023 94273</p>
+            <p><span className="font-semibold">Phone:</span> +91 8125230807</p>
             <p><span className="font-semibold">Email:</span> info@abukuagro.com</p>
             {/* <p><span className="font-semibold">Address:</span> 71A, Street 2, First Block, Setia Colony, Sriganganagar, Rajasthan</p> */}
             {/* <p><span className="font-semibold">Instagram:</span> @vinod.choudhary777</p> */}
