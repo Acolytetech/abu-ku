@@ -1,5 +1,6 @@
 "use client";
 
+import GradingSection from "@/components/GradingSection";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -72,12 +73,12 @@ export default function Home() {
       {
         title: "Modern Storage Solutions",
         desc: "Warehouses minimizing post-harvest losses and preserving quality.",
-        img: "/img/Cardamom-green.jpg",
+        img: "/img/Cardamom-green1.jpg",
       },
       {
         title: "End-to-End Processing",
         desc: "Cleaning, grading, and packaging market-ready cardamom.",
-        img: "/img/green-cardamom.webp",
+        img: "/img/Cardamom-green.jpg",
       },
     ].map((item, index) => (
       <motion.div
@@ -105,6 +106,7 @@ export default function Home() {
   </div>
 </motion.section>
 
+      <GradingSection/>
 
       {/* Products Section */}
       <motion.section
