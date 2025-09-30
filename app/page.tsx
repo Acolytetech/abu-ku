@@ -162,66 +162,88 @@ export default function Home() {
         variants={fadeInUp}
       >
         <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center text-yellow-400">Contact Us</h2>
-        <div className="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md grid gap-6 md:grid-cols-2">
-          
-          {/* Contact Info */}
-          <motion.div
-            className="space-y-4"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h3 className="font-bold text-lg">Get in Touch</h3>
-            <p>V2R Vision Advisory and Consulting.</p>
-            <p><span className="font-semibold">Phone:</span> +91 8125230807</p>
-            <p><span className="font-semibold">Email:</span> info@abukuagro.com</p>
-            {/* <p><span className="font-semibold">Address:</span> 71A, Street 2, First Block, Setia Colony, Sriganganagar, Rajasthan</p> */}
-            {/* <p><span className="font-semibold">Instagram:</span> @vinod.choudhary777</p> */}
-          </motion.div>
+     <div className="max-w-4xl mx-auto bg-white p-6 rounded-xl  shadow-md grid gap-6 md:grid-cols-2 relative">
+  {/* Contact Info */}
+  <motion.div
+    className="relative text-white text-center items-center flex flex-col justify-center rounded-xl overflow-hidden"
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.6 }}
+  >
+    {/* Background image */}
+    <div
+      className="absolute inset-0 bg-cover bg-no-repeat bg-center"
+      style={{
+        backgroundImage: "url('/img/about img.png')",
+        backgroundAttachment: "fixed",
+      }}
+    ></div>
 
-          {/* Contact Form */}
-          <motion.form
-            className="space-y-4"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div>
-              <label className="block font-semibold mb-1" htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                placeholder="Your Name"
-              />
-            </div>
-            <div>
-              <label className="block font-semibold mb-1" htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                placeholder="Your Email"
-              />
-            </div>
-            <div>
-              <label className="block font-semibold mb-1" htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                rows={4}
-                className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                placeholder="Your Message"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="bg-yellow-500 text-white font-semibold px-6 py-2 rounded-md hover:bg-yellow-600 transition"
-            >
-              Send Message
-            </button>
-          </motion.form>
+    {/* Dark overlay */}
+    <div className="absolute inset-0 bg-black/60"></div>
 
-        </div>
+    {/* Content on top */}
+    <div className="relative z-10 p-6 flex flex-col gap-4">
+      <h3 className="font-bold text-xl">Get in Touch</h3>
+      <p>V2R Vision Advisory and Consulting.</p>
+      <p>
+        <span className="font-semibold">Phone:</span> +91 8125230807
+      </p>
+      <p>
+        <span className="font-semibold">Email:</span> info@abukuagro.com
+      </p>
+    </div>
+  </motion.div>
+
+  {/* Contact Form */}
+  <motion.form
+    className="space-y-4"
+    initial={{ opacity: 0, x: 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.6 }}
+  >
+    <div>
+      <label className="block font-semibold mb-1" htmlFor="name">
+        Name
+      </label>
+      <input
+        type="text"
+        id="name"
+        className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+        placeholder="Your Name"
+      />
+    </div>
+    <div>
+      <label className="block font-semibold mb-1" htmlFor="email">
+        Email
+      </label>
+      <input
+        type="email"
+        id="email"
+        className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+        placeholder="Your Email"
+      />
+    </div>
+    <div>
+      <label className="block font-semibold mb-1" htmlFor="message">
+        Message
+      </label>
+      <textarea
+        id="message"
+        rows={4}
+        className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+        placeholder="Your Message"
+      ></textarea>
+    </div>
+    <button
+      type="submit"
+      className="bg-yellow-500 text-white font-semibold px-6 py-2 rounded-md hover:bg-yellow-600 transition"
+    >
+      Send Message
+    </button>
+  </motion.form>
+</div>
+
       </motion.section>
 
     </main>
