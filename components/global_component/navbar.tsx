@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -10,19 +11,20 @@ export default function Navbar() {
 
   const links = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/" },
-    { name: "Contact", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
-    <nav className="bg-yellow-500 text-white shadow-md fixed w-full z-50">
+    <nav className="bg-green-700 text-white shadow-md fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link
           href="/"
-          className="text-2xl font-extrabold tracking-wide hover:text-gray-100 transition"
+          className="text-2xl font-extrabold tracking-wide bg-white px-4 rounded-full hover:text-gray-100 transition"
         >
-          ABU-KU Agro Farms
+                  <Image src='/img/abuku logo.png' width={160} height={70} alt="logo" className="object-center object-cover h-16"/>
+
         </Link>
 
         {/* Desktop Menu */}
@@ -51,7 +53,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-yellow-400 text-white font-semibold px-6 py-4 space-y-4">
+        <div className="md:hidden bg-green-700 text-white font-semibold px-6 py-4 space-y-4">
           {links.map((link) => (
             <Link
               key={link.href}

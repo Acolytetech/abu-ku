@@ -16,7 +16,7 @@ export default function GradingSection() {
     <section className="py-20 px-6 md:px-12 lg:px-20 bg-white text-center">
       {/* Heading */}
       <motion.h2
-        className="text-3xl md:text-4xl font-bold text-green-800 mb-6"
+        className="text-3xl md:text-4xl font-bold text-orange-500 mb-6"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}

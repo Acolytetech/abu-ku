@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-yellow-500 text-white py-10 mt-12">
+    <footer className="bg-green-700 text-white py-10 mt-12">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 text-center justify-center gap-6">
         {/* About */}
         <div>
@@ -32,7 +32,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="text-center mt-6 border-t border-yellow-300 pt-4 text-sm">
+      <div className="text-center mt-6 border-t border-white pt-4 text-sm">
         © {new Date().getFullYear()} ABU-KU Agro Farms. All rights reserved.
       </div>
     </footer>

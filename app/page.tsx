@@ -1,6 +1,7 @@
 "use client";
 
 import GradingSection from "@/components/GradingSection";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -21,7 +22,7 @@ export default function Home() {
 
       {/* Hero Section with Background Image */}
       <motion.section
-        className="relative text-center text-white py-50 rounded-xl shadow-lg mb-12 bg-cover bg-center bg-fixed"
+        className="relative text-center text-white py-50 rounded-xl shadow-lg bg-cover bg-center bg-fixed overflow-hidden"
         style={{ backgroundImage: "url('/img/Cardamom-green.jpg')" }}
         initial="hidden"
         animate="visible"
@@ -41,7 +42,7 @@ export default function Home() {
             ABU-KU Agro Farms
           </motion.h1>
           <motion.p
-            className="text-md md:text-lg max-w-2xl mx-auto"
+            className="text-md md:text-lg max-w-2xl mx-auto text-orange-500"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
@@ -53,17 +54,17 @@ export default function Home() {
 
      {/* About Section */}
 <motion.section
-  className="my-20 px-4 md:px-0 sm:max-w-6xl mx-auto"
+  className="py-20 px-4 md:px-0  mx-auto bg-green-50 -mt-10"
   initial="hidden"
   whileInView="visible"
   viewport={{ once: true }}
   variants={fadeInUp}
 >
-  <h2 className="text-2xl md:text-3xl text-yellow-400 font-semibold my-12 text-center">
+  <h2 className="text-2xl md:text-3xl text-orange-500 font-bold my-12 text-center">
     Why Partner With Us
   </h2>
 
-  <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6">
+  <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
     {[
       {
         title: "Farmer Empowerment",
@@ -116,7 +117,7 @@ export default function Home() {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <h2 className="text-2xl md:text-3xl font-semibold my-12 text-center text-yellow-400">Our Products & Services</h2>
+        <h2 className="text-2xl md:text-3xl font-bold my-12 text-center text-orange-500">Our Products & Services</h2>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
           {[
             { title: "Cardamom", desc: "Cleaned, graded, and packaged for retail and wholesale." },
@@ -138,16 +139,16 @@ export default function Home() {
           ))}
         </div>
       </motion.section>
-
+<WhyChooseUs/>
       {/* Market Section */}
       <motion.section
-        className="text-center mb-12 px-4 md:px-0"
+        className="text-center my-12 px-4 md:px-0"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-yellow-400">Market Opportunity</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-orange-500">Market Opportunity</h2>
         <p className="max-w-2xl mx-auto">
           The global cardamom market was USD 890.5M in 2024 and is expected to reach USD 1,655.7M by 2035, growing at a CAGR of 5.8%.
         </p>
@@ -161,8 +162,8 @@ export default function Home() {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center text-yellow-400">Contact Us</h2>
-     <div className="max-w-4xl mx-auto bg-white p-6 rounded-xl  shadow-md grid gap-6 md:grid-cols-2 relative">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-orange-500">Contact Us</h2>
+     <div className="max-w-4xl mx-auto bg-green-50 p-6 rounded-xl  shadow-md grid gap-6 md:grid-cols-2 relative">
   {/* Contact Info */}
   <motion.div
     className="relative text-white text-center items-center flex flex-col justify-center rounded-xl overflow-hidden"
@@ -209,7 +210,7 @@ export default function Home() {
       <input
         type="text"
         id="name"
-        className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+        className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-800"
         placeholder="Your Name"
       />
     </div>
@@ -220,7 +221,7 @@ export default function Home() {
       <input
         type="email"
         id="email"
-        className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+        className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-800"
         placeholder="Your Email"
       />
     </div>
@@ -231,13 +232,13 @@ export default function Home() {
       <textarea
         id="message"
         rows={4}
-        className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+        className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-800"
         placeholder="Your Message"
       ></textarea>
     </div>
     <button
       type="submit"
-      className="bg-yellow-500 text-white font-semibold px-6 py-2 rounded-md hover:bg-yellow-600 transition"
+      className="bg-orange-500 text-white font-semibold px-6 py-2 rounded-md hover:bg-orange-600 transition"
     >
       Send Message
     </button>
