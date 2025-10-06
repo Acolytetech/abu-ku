@@ -48,7 +48,7 @@ Connecting small farmers to bigger opportunities through quality cardamom produc
       </motion.section>
       {/* About Description */}
       <motion.section
-        className="bg-green-50 p-8 rounded-2xl shadow-lg"
+        className="bg-green-50 p-8 max-w-7xl mx-auto text-center rounded-2xl shadow-lg"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
@@ -60,20 +60,20 @@ Connecting small farmers to bigger opportunities through quality cardamom produc
 
       {/* Mission */}
       <motion.section
-        className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto"
+        className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.3 }}
       >
         <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition-shadow duration-300">
-          <h2 className="text-2xl font-semibold text-orange-500 mb-4">Our Mission</h2>
+          <h2 className="text-2xl font-semibold text-green-800 mb-4">Our Mission</h2>
           <p className="text-gray-700">
             Streamline manual processes, enhance productivity, and create value for both farmers and consumers.
           </p>
         </div>
 
         <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition-shadow duration-300">
-          <h2 className="text-2xl font-semibold text-orange-500 mb-4">Problems We Solve</h2>
+          <h2 className="text-2xl font-semibold text-green-800 mb-4">Problems We Solve</h2>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
             <li>Lack of Storage – reducing 15–20% post-harvest losses.</li>
             <li>Manual Processing – improving quality through automation.</li>
@@ -84,12 +84,12 @@ Connecting small farmers to bigger opportunities through quality cardamom produc
 
       {/* Solutions */}
       <motion.section
-        className="bg-green-50 p-8 rounded-2xl shadow-lg"
+        className="bg-green-50 p-8 rounded-2xl mx-auto max-w-7xl shadow-lg"
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.4 }}
       >
-        <h2 className="text-2xl font-semibold text-orange-500 mb-4">Our Solutions</h2>
+        <h2 className="text-2xl font-semibold text-green-800 mb-4">Our Solutions</h2>
         <ul className="list-disc list-inside text-gray-800 space-y-2">
           <li>Efficient Storage – secure warehouses to minimize post-harvest losses.</li>
           <li>Centralized Collection & Processing – cleaning, grading, packaging, and distribution support.</li>
@@ -99,13 +99,13 @@ Connecting small farmers to bigger opportunities through quality cardamom produc
 
       {/* Scale-Up Strategy */}
       <motion.section
-        className="grid md:grid-cols-2 gap-8"
+        className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
       >
         <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition-shadow duration-300">
-          <h2 className="text-2xl font-semibold text-orange-500 mb-4">Scale-Up Strategy</h2>
+          <h2 className="text-2xl font-semibold text-green-800 mb-4">Scale-Up Strategy</h2>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
             <li>Farmer Network Expansion – onboard more small farms.</li>
             <li>Warehouse Growth – additional storage facilities.</li>

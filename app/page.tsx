@@ -42,7 +42,7 @@ export default function Home() {
             ABU-KU Agro Farms
           </motion.h1>
           <motion.p
-            className="text-md md:text-lg max-w-2xl mx-auto text-orange-500"
+            className="text-md md:text-lg max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
@@ -60,7 +60,7 @@ export default function Home() {
   viewport={{ once: true }}
   variants={fadeInUp}
 >
-  <h2 className="text-2xl md:text-3xl text-orange-500 font-bold my-12 text-center">
+  <h2 className="text-2xl md:text-3xl text-green-800 font-bold my-12 text-center">
     Why Partner With Us
   </h2>
 
@@ -117,7 +117,7 @@ export default function Home() {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <h2 className="text-2xl md:text-3xl font-bold my-12 text-center text-orange-500">Our Products & Services</h2>
+        <h2 className="text-2xl md:text-3xl font-bold my-12 text-center text-green-800">Our Products & Services</h2>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
           {[
             { title: "Cardamom", desc: "Cleaned, graded, and packaged for retail and wholesale." },
@@ -148,7 +148,7 @@ export default function Home() {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-orange-500">Market Opportunity</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-green-800">Market Opportunity</h2>
         <p className="max-w-2xl mx-auto">
           The global cardamom market was USD 890.5M in 2024 and is expected to reach USD 1,655.7M by 2035, growing at a CAGR of 5.8%.
         </p>
@@ -162,7 +162,7 @@ export default function Home() {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-orange-500">Contact Us</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-green-800">Contact Us</h2>
      <div className="max-w-4xl mx-auto bg-green-50 p-6 rounded-xl  shadow-md grid gap-6 md:grid-cols-2 relative">
   {/* Contact Info */}
   <motion.div
@@ -238,7 +238,7 @@ export default function Home() {
     </div>
     <button
       type="submit"
-      className="bg-orange-500 text-white font-semibold px-6 py-2 rounded-md hover:bg-orange-600 transition"
+      className="bg-green-800 text-white font-semibold px-6 py-2 rounded-md hover:bg-green-600 transition"
     >
       Send Message
     </button>

@@ -8,24 +8,24 @@ export default function WhyChooseUs() {
     {
       title: "Empowering Farmers",
       desc: "We ensure small farmers receive fair prices and dependable support for their harvests, helping them grow sustainably.",
-      icon: <Leaf className="w-8 h-8 text-black" />,
+      icon: <Leaf className="w-8 h-8 text-green-700" />,
     },
     {
       title: "Advanced Storage Facilities",
       desc: "Our modern warehouses reduce post-harvest losses and maintain the highest quality of cardamom from farm to market.",
-      icon: <Warehouse className="w-8 h-8 textblack" />,
+      icon: <Warehouse className="w-8 h-8 text-green-700" />,
     },
     {
       title: "Comprehensive Processing",
       desc: "From cleaning and grading to packaging, we prepare cardamom that’s ready to meet market standards.",
-      icon: <Package className="w-8 h-8 text-black" />,
+      icon: <Package className="w-8 h-8 text-green-700" />,
     },
   ];
 
   return (
     <section className="py-20 px-6 md:px-12 lg:px-20 bg-green-50">
       <motion.h2
-        className="text-3xl md:text-4xl font-bold text-center text-orange-500 mb-12"
+        className="text-3xl md:text-4xl font-bold text-center text-green-800 mb-12"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
             transition={{ duration: 0.6, delay: index * 0.2 }}
           >
             <div className="mb-4">{item.icon}</div>
-            <h3 className="text-xl font-semibold text-black mb-2">
+            <h3 className="text-xl font-semibold text-green-800 mb-2">
               {item.title}
             </h3>
             <p className="text-gray-600">{item.desc}</p>

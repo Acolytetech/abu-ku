@@ -4,6 +4,10 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { FaWhatsapp } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -16,30 +20,49 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-green-700 text-white shadow-md fixed w-full z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav className=" bg-gradient-to-l from-green-700  to-white text-white shadow-md fixed w-full z-50">
+      <div className="  mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link
           href="/"
-          className="text-2xl font-extrabold tracking-wide bg-white px-4 rounded-full hover:text-gray-100 transition"
+          className="text-2xl font-extrabold tracking-wide hover:text-gray-100 transition"
         >
-                  <Image src='/img/abuku logo.png' width={160} height={70} alt="logo" className="object-center object-cover h-16"/>
-
+          <Image
+            src="/img/logo.png"
+            alt="abu ku logo"
+            width={200}
+            height={150}
+            className="object-cover object-center rounded-xl"
+          />
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 font-semibold">
+        <div className="hidden md:flex space-x-8 font-semibold items-center">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`hover:text-gray-200 transition ${
-                pathname === link.href ? "underline underline-offset-4 font-bold" : ""
+              className={`hover:text-gray-200 transition text-2xl ${
+                pathname === link.href
+                  ? "underline underline-offset-4 font-bold"
+                  : ""
               }`}
             >
               {link.name}
             </Link>
           ))}
+          <Link href="#">
+            <motion.div
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.2)",
+              }}
+              className="flex gap-2 bg-white text-green-700 items-center text-2xl border rounded-full p-4 transition-all duration-300"
+            >
+              <FaWhatsapp />
+              8125230807
+            </motion.div>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -60,7 +83,9 @@ export default function Navbar() {
               href={link.href}
               onClick={() => setOpen(false)}
               className={`block hover:text-gray-200 transition ${
-                pathname === link.href ? "underline underline-offset-4 font-bold" : ""
+                pathname === link.href
+                  ? "underline underline-offset-4 font-bold"
+                  : ""
               }`}
             >
               {link.name}
