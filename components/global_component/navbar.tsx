@@ -20,7 +20,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className=" bg-gradient-to-l from-green-700  to-white text-white shadow-md fixed w-full z-50">
+    <nav className=" bg-gradient-to-l from-40% from-green-700  to-white text-white shadow-md fixed w-full z-50">
       <div className="  mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link
