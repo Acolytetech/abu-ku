@@ -51,7 +51,7 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Link href="#">
+          <Link href="https://wa.me/8125230807">
             <motion.div
               whileHover={{
                 scale: 1.05,

@@ -22,8 +22,8 @@ export default function Home() {
 
       {/* Hero Section with Background Image */}
       <motion.section
-        className="relative text-center text-white py-50 rounded-xl shadow-lg bg-cover bg-center bg-fixed overflow-hidden"
-        style={{ backgroundImage: "url('/img/Cardamom-green.jpg')" }}
+        className="relative  max-h-[80vh] h-[90vh] text-center text-white rounded-xl shadow-lg bg-cover bg-no-repeat bg-bottom sm:bg-top bg-fixed overflow-hidden"
+        style={{ backgroundImage: "url('/img/hero1.jpg')" }}
         initial="hidden"
         animate="visible"
         variants={fadeIn}
@@ -32,7 +32,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/60"></div>
 
         {/* Hero content */}
-        <div className="relative z-10 px-4 md:px-8">
+        <div className="absolute top-1/2 left-1/2 transform  -translate-1/2 z-10  w-full px-2 sm:px-10">
           <motion.h1
             className="text-3xl md:text-5xl font-bold mb-4"
             initial={{ opacity: 0, y: -20 }}
