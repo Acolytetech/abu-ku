@@ -32,7 +32,14 @@ export default function Navbar() {
             alt="abu ku logo"
             width={200}
             height={150}
-            className="object-cover object-center rounded-xl"
+            className="object-cover object-center rounded-xl hidden sm:block"
+          />
+          <Image
+            src="/img/logo.png"
+            alt="abu ku logo"
+            width={100}
+            height={150}
+            className="object-cover object-center rounded-xl  sm:hidden"
           />
         </Link>
 
@@ -91,6 +98,18 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
+          <Link href="https://wa.me/8125230807">
+            <motion.div
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.2)",
+              }}
+              className="flex gap-2 bg-white  text-green-700 text-sm w-fit items-center border rounded-full p-2 transition-all duration-300"
+            >
+              <FaWhatsapp />
+              8125230807
+            </motion.div>
+          </Link>
         </div>
       )}
     </nav>

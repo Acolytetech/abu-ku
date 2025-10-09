@@ -22,7 +22,7 @@ export default function Home() {
 
       {/* Hero Section with Background Image */}
       <motion.section
-        className="relative  max-h-[80vh] h-[90vh] text-center text-white rounded-xl shadow-lg bg-cover bg-no-repeat bg-bottom sm:bg-top bg-fixed overflow-hidden"
+        className="relative  max-h-[80vh] h-[90vh] text-center text-white  shadow-lg bg-cover bg-no-repeat bg-bottom sm:bg-top bg-fixed overflow-hidden"
         style={{ backgroundImage: "url('/img/hero1.jpg')" }}
         initial="hidden"
         animate="visible"
