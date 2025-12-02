@@ -9,7 +9,7 @@ const fadeInUp = {
 
 interface ProductItem {
   title: string;
-  desc: string | any;
+  desc: string ;
 }
 
 const products: ProductItem[] = [
