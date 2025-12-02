@@ -13,9 +13,9 @@ export default function FarmWarehouseSection() {
 
       {/* Farm Images */}
       <div className="mb-16">
-        <h3 className="text-xl md:text-2xl font-semibold text-green-700 mb-4">
+        {/* <h3 className="text-xl md:text-2xl font-semibold text-green-700 mb-4">
           Our Farms
-        </h3>
+        </h3> */}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           
