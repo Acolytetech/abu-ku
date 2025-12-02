@@ -1,3 +1,22 @@
 @import "tailwindcss";
 
+.marquee {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 24s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 

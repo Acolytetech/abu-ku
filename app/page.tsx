@@ -1,9 +1,15 @@
 "use client";
 
+import FarmWarehouseSection from "@/components/FarmWarehouseSection";
 import GradingSection from "@/components/GradingSection";
+import ProductSection from "@/components/ProductSection";
+import StockistSection from "@/components/StockistSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Home() {
   // Motion variants
@@ -21,37 +27,52 @@ export default function Home() {
     <main className="py-12">
 
       {/* Hero Section with Background Image */}
-      <motion.section
-        className="relative  max-h-[80vh] h-[90vh] text-center text-white  shadow-lg bg-cover bg-no-repeat bg-bottom sm:bg-top bg-fixed overflow-hidden"
-        style={{ backgroundImage: "url('/img/hero1.jpg')" }}
-        initial="hidden"
-        animate="visible"
-        variants={fadeIn}
+<motion.section
+  className="relative  max-h-[90vh] h-[90vh] text-center text-white shadow-lg bg-cover bg-no-repeat bg-bottom sm:bg-top bg-fixed  overflow-hidden"
+  style={{ backgroundImage: "url('/img/cardmom banner image.png')", backgroundSize: 'cover'  }}
+  initial="hidden"
+  animate="visible"
+  variants={fadeIn}
+>
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black/40"></div>
+
+  {/* Hero content */}
+  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/3  z-10 w-full px-2  sm:px-10">
+    <motion.h1
+      className="text-3xl md:text-6xl font-bold mb-6"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
+      ABU-KU Agro Farms
+    </motion.h1>
+
+    <motion.p
+      className="text-lg md:text-2xl max-w-3xl mx-auto mb-6"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 0.3 }}
+    >
+      Supporting small farmers and delivering high-quality cardamom with centralized storage,
+      processing, and distribution.
+    </motion.p>
+
+    <Link href="/about">
+      <motion.div
+        whileHover={{
+          scale: 1.05,
+          boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.2)",
+        }}
+        className="flex gap-2 mx-auto w-fit bg-white text-green-700 font-bold items-center text-2xl border rounded-full p-4 px-10 transition-all duration-300"
       >
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        Know More <ArrowRight />
+      </motion.div>
+    </Link>
+  </div>
+</motion.section>
 
-        {/* Hero content */}
-        <div className="absolute top-1/2 left-1/2 transform  -translate-1/2 z-10  w-full px-2 sm:px-10">
-          <motion.h1
-            className="text-3xl md:text-5xl font-bold mb-4"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            ABU-KU Agro Farms
-          </motion.h1>
-          <motion.p
-            className="text-md md:text-lg max-w-2xl mx-auto"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
-          >
-            Supporting small farmers and delivering high-quality cardamom with centralized storage, processing, and distribution.
-          </motion.p>
-        </div>
-      </motion.section>
-
+<FarmWarehouseSection/>
      {/* About Section */}
 <motion.section
   className="py-20 px-4 md:px-0  mx-auto bg-green-50 -mt-10"
@@ -107,10 +128,11 @@ export default function Home() {
   </div>
 </motion.section>
 
+{/* <StockistSection/> */}
       <GradingSection/>
-
+<ProductSection/>
       {/* Products Section */}
-      <motion.section
+      {/* <motion.section
         className="my-24 px-2 w-full sm:max-w-6xl mx-auto md:px-0"
         initial="hidden"
         whileInView="visible"
@@ -138,7 +160,7 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-      </motion.section>
+      </motion.section> */}
 <WhyChooseUs/>
       {/* Market Section */}
       <motion.section

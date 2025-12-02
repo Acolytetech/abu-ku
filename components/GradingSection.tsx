@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 
 export default function GradingSection() {
   const grades = [
-    { size: "8 mm", label: "Purple Grade", color: "bg-purple-700", scale: 1 },
-    { size: "7.5 mm", label: "Pink Grade", color: "bg-pink-600", scale: 0.93 },
-    { size: "7 mm", label: "Green Grade", color: "bg-green-700", scale: 0.87 },
-    { size: "6.5 mm", label: "Orange Grade", color: "bg-orange-600", scale: 0.81 },
-    { size: "6 mm", label: "Red Grade", color: "bg-red-600", scale: 0.75 },
+    { size: "8 mm", label: "Purple Grade", color: "bg-purple-700", scale: 1.5 },
+    { size: "7.5 mm", label: "Pink Grade", color: "bg-pink-600", scale: 1.3 },
+    { size: "7 mm", label: "Green Grade", color: "bg-green-700", scale: 1.1 },
+    { size: "6.5 mm", label: "Orange Grade", color: "bg-orange-600", scale: 0.9 },
+    { size: "6 mm", label: "Red Grade", color: "bg-red-600", scale: 0.8 },
   ];
 
   return (
@@ -39,11 +39,11 @@ export default function GradingSection() {
       </motion.p>
 
       {/* Grade Items */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-8 justify-center">
+      <div className="grid grid-cols-2 max-w-7xl mx-auto md:grid-cols-5  justify-center md:scale-125 md:py-10">
         {grades.map((grade, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center scale-120 "
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -67,7 +67,7 @@ export default function GradingSection() {
             >
               {grade.size}
             </span>
-            <p className="mt-2 text-sm font-medium text-gray-700">
+            <p className="mt-2 text-lg font-medium text-gray-700">
               {grade.label}
             </p>
           </motion.div>
