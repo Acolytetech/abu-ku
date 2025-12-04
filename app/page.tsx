@@ -28,7 +28,7 @@ export default function Home() {
 
       {/* Hero Section with Background Image */}
 <motion.section
-  className="relative  max-h-[90vh] h-[90vh] text-center text-white shadow-lg bg-cover bg-no-repeat bg-bottom sm:bg-top bg-fixed  overflow-hidden"
+  className="relative  max-h-[90vh] h-[70vh] md:h-[90vh] text-center text-white shadow-lg bg-cover bg-no-repeat bg-bottom sm:bg-top bg-fixed  overflow-hidden"
   style={{ backgroundImage: "url('/img/cardmom banner image.png')", backgroundSize: 'cover'  }}
   initial="hidden"
   animate="visible"
@@ -85,22 +85,22 @@ export default function Home() {
     Why Partner With Us
   </h2>
 
-  <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+  <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
     {[
       {
         title: "Farmer Empowerment",
         desc: "Reliable collection and fair pricing for small farmers.",
-        img: "/img/green-cardamom.webp",
+        img: "/img/bigilychi1.jpg",
       },
       {
         title: "Modern Storage Solutions",
         desc: "Warehouses minimizing post-harvest losses and preserving quality.",
-        img: "/img/Cardamom-green1.jpg",
+        img: "/img/bigilaychi2.webp",
       },
       {
         title: "End-to-End Processing",
         desc: "Cleaning, grading, and packaging market-ready cardamom.",
-        img: "/img/Cardamom-green.jpg",
+        img: "/img/bigilaychi.jpg",
       },
     ].map((item, index) => (
       <motion.div
@@ -112,7 +112,7 @@ export default function Home() {
         transition={{ delay: index * 0.2 }}
       >
         {/* Image container must be relative with fixed height */}
-        <div className="relative w-full h-40 mb-4">
+        <div className="relative w-full h-60 mb-4">
           <Image
             src={item.img}
             alt={item.title}
@@ -163,7 +163,17 @@ export default function Home() {
       </motion.section> */}
 <WhyChooseUs/>
       {/* Market Section */}
+ 
+
+      {/* Contact Section */}
       <motion.section
+        className=" px-4 md:px-0 relative py-10 md:pb-40"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
+             <motion.section
         className="text-center my-12 px-4 md:px-0"
         initial="hidden"
         whileInView="visible"
@@ -175,17 +185,11 @@ export default function Home() {
           The global cardamom market was USD 890.5M in 2024 and is expected to reach USD 1,655.7M by 2035, growing at a CAGR of 5.8%.
         </p>
       </motion.section>
+<img src='/img/a.png' alt='Contact Us' className="hidden md:block md:absolute top-0 right-0 z-1 w-[30%] h-full object-cover rounded-xl mb-8"/>
+<img src='/img/a.png' alt='Contact Us' className="hidden md:block md:absolute top-0 left-0 z-1 w-[30%] h-full object-cover rounded-xl mb-8"/>
 
-      {/* Contact Section */}
-      <motion.section
-        className="mb-12 px-4 md:px-0"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-green-800">Contact Us</h2>
-     <div className="max-w-4xl mx-auto bg-green-50 p-6 rounded-xl  shadow-md grid gap-6 md:grid-cols-2 relative">
+     <div className="max-w-4xl mx-auto bg-green-50 p-6 rounded-xl  shadow-md grid gap-6 md:grid-cols-2 relative z-20">
   {/* Contact Info */}
   <motion.div
     className="relative text-white text-center items-center flex flex-col justify-center rounded-xl overflow-hidden"
