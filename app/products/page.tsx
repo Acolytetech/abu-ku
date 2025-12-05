@@ -1,115 +1,32 @@
-// "use client";
-
-// import Image from "next/image";
-// import { motion } from "framer-motion";
-
-// const products = [
-//   {
-//     title: "Whole Green Cardamom",
-//     grade: "7.5mm – 9mm Grades",
-//     desc: "High-quality, freshly harvested cardamom cleaned, dried and graded.",
-//     img: "/img/cardamom1.png",
-//   },
-//   {
-//     title: "Cardamom Powder",
-//     grade: "Fine & Premium Grind",
-//     desc: "Pure spice powder with no fillers — ideal for retail & food industry.",
-//     img: "/img/cardamom-powder.png",
-//   },
-//   {
-//     title: "Processed Spice Powders",
-//     grade: "Blends & Pure Spices",
-//     desc: "Cinnamon, clove, pepper blends and custom spice mixes.",
-//     img: "/img/spice-powders.png",
-//   },
-//   {
-//     title: "Bulk & Private Label Supply",
-//     grade: "1kg – 50kg Packaging",
-//     desc: "Custom branding and wholesale supply for businesses.",
-//     img: "/img/private-label.png",
-//   },
-// ];
-
-// export default function ProductsPage() {
-//   return (
-//     <div className="pt-20">
-
-//       {/* Hero Section */}
-//       <section className="bg-gradient-to-r from-green-700 to-green-600 text-white py-20 text-center">
-//         <h1 className="text-4xl font-bold mb-3">Our Products</h1>
-//         <p className="text-lg max-w-2xl mx-auto">
-//           Premium cardamom and spice products sourced from trusted farmers.
-//         </p>
-//       </section>
-
-//       {/* Product Grid */}
-//       <section className="max-w-7xl mx-auto px-6 py-16">
-//         <h2 className="text-3xl font-bold text-center mb-10 text-green-800">
-//           Product Categories
-//         </h2>
-
-//         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-//           {products.map((p, i) => (
-//             <motion.div
-//               key={i}
-//               initial={{ opacity: 0, y: 30 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 0.6 }}
-//               viewport={{ once: true }}
-//               className="bg-white shadow-md rounded-2xl p-6 hover:shadow-xl transition"
-//             >
-//               <div className="w-full h-52 relative mb-4">
-//                 <Image
-//                   src={p.img}
-//                   alt={p.title}
-//                   fill
-//                   className="object-contain rounded-xl"
-//                 />
-//               </div>
-
-//               <h3 className="text-xl font-semibold text-green-900">{p.title}</h3>
-//               <p className="text-sm text-green-700 mt-1">{p.grade}</p>
-
-//               <p className="text-gray-600 mt-3">{p.desc}</p>
-
-//               <button className="mt-5 w-full py-2 bg-green-600 text-white rounded-xl hover:bg-green-700 transition">
-//                 Request Price
-//               </button>
-//             </motion.div>
-//           ))}
-//         </div>
-//       </section>
-
-//       {/* Bulk Section */}
-//       <section className="bg-green-50 py-20 text-center">
-//         <h2 className="text-3xl font-bold text-green-900 mb-4">
-//           Bulk & Private Label Supply
-//         </h2>
-//         <p className="max-w-3xl mx-auto text-gray-700">
-//           We provide wholesale supply of cardamom and spice products for retailers,
-//           brands, exporters, and e-commerce sellers. Fully customizable branding and packaging options.
-//         </p>
-
-//         <button className="mt-8 px-10 py-3 bg-green-700 text-white rounded-xl hover:bg-green-800 transition">
-//           Contact for Bulk Pricing
-//         </button>
-//       </section>
-//     </div>
-//   );
-// }
-
-
 "use client";
 
 import { useState } from "react";
 import Image from "next/image";
 
-export default function ProductsPage() {
-  const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState<any>(null);
+// ------------------ TYPES ------------------
 
-  // Form values
-  const [form, setForm] = useState({
+interface Product {
+  id: number;
+  name: string;
+  desc: string;
+  img: string;
+}
+
+interface FormData {
+  name: string;
+  phone: string;
+  email: string;
+  quantity: string;
+  message: string;
+}
+
+// ------------------ COMPONENT ------------------
+
+export default function ProductsPage() {
+  const [open, setOpen] = useState<boolean>(false);
+  const [selected, setSelected] = useState<Product | null>(null);
+
+  const [form, setForm] = useState<FormData>({
     name: "",
     phone: "",
     email: "",
@@ -117,7 +34,7 @@ export default function ProductsPage() {
     message: "",
   });
 
-  const products = [
+  const products: Product[] = [
     {
       id: 1,
       name: "Big Cardamom",
@@ -138,19 +55,24 @@ export default function ProductsPage() {
     },
   ];
 
-  const openPopup = (item: any) => {
+  // ----------- POPUP OPEN ----------------
+  const openPopup = (item: Product) => {
     setSelected(item);
     setOpen(true);
   };
 
-  const handleChange = (e: any) => {
+  // ----------- FORM CHANGE ----------------
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: any) => {
+  // ----------- SUBMIT (SEND WHATSAPP) ---------------
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const phone = "919664455006"; // 📌 YOUR OFFICIAL WHATSAPP NUMBER HERE
+    const phone = "919664455006"; // YOUR WHATSAPP NUMBER
 
     const msg = `
 🌿 *New Price Request*
@@ -169,26 +91,25 @@ Please respond to customer.
     window.open(url, "_blank");
   };
 
+  // ------------------ UI ------------------
+
   return (
     <div className="min-h-screen bg-[#F8FFF8] py-20 px-4">
-     {/* Hero Section */}
-      <section className=" relative text-white py-40 text-center bg-no-repeat bg-cover bg-center"
-              style={{ backgroundImage: "url('/img/aboutbg.webp')" }}
 
+      {/* HERO SECTION */}
+      <section
+        className="relative text-white py-40 text-center bg-no-repeat bg-cover bg-center"
+        style={{ backgroundImage: "url('/img/aboutbg.webp')" }}
       >
-                <div className="absolute inset-0 bg-black/40 z-10"></div>
-<div className=" relative z-20">
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
 
-        <h1 className="text-4xl font-bold mb-3">Our Products</h1>
-        <p className="text-lg max-w-2xl mx-auto">
-           Premium cardamom and spice products sourced from trusted farmers.
-         </p>
-</div>
-       </section>
-      {/* PAGE TITLE
-      <h1 className="text-4xl md:text-5xl font-bold text-center text-green-800 my-14">
-        Our Products
-      </h1> */}
+        <div className="relative z-20">
+          <h1 className="text-4xl font-bold mb-3">Our Products</h1>
+          <p className="text-lg max-w-2xl mx-auto">
+            Premium cardamom and spice products sourced from trusted farmers.
+          </p>
+        </div>
+      </section>
 
       {/* PRODUCT GRID */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-30">
@@ -209,9 +130,7 @@ Please respond to customer.
               {item.name}
             </h2>
 
-            <p className="text-gray-600 text-sm mt-2 text-center">
-              {item.desc}
-            </p>
+            <p className="text-gray-600 text-sm mt-2 text-center">{item.desc}</p>
 
             <button
               onClick={() => openPopup(item)}
@@ -245,7 +164,6 @@ Please respond to customer.
 
             {/* FORM */}
             <form onSubmit={handleSubmit} className="space-y-4">
-
               <input
                 type="text"
                 name="name"
