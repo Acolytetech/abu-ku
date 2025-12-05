@@ -112,7 +112,16 @@ export default function Home() {
     ))}
   </div>
 </motion.section>
-
+  <div className="relative w-full h-[50vh] my-10">
+          <img
+            src="/img/bg-112.jpg"
+            alt="cardmom processing"
+            className="object-cover object-center rounded-lg w-full"
+          />
+          <h2 className="absolute top-1/2 left-1/2 -translate-1/2 mt-10 text-5xl text-center w-2xl leading-[1.2] font-bold">
+            Empowering Rural Farmers With Fair Trade Practices
+            </h2>
+        </div>
 {/* <StockistSection/> */}
       <GradingSection/>
 <ProductSection/>
