@@ -21,8 +21,8 @@ export default function FarmWarehouseSection() {
           
           {/* Farm Image 1 */}
           <div className="relative w-full h-60 sm:h-72 md:h-80 overflow-hidden rounded-xl shadow-lg">
-            <Image 
-              src="/img/f1.webp"
+            <Image
+              src="/img/f2.jpg"
               alt="Farm Image 1"
               fill
               className="object-cover object-center rounded-xl hover:scale-105 transition duration-500"
@@ -30,20 +30,20 @@ export default function FarmWarehouseSection() {
           </div>
 
           {/* Farm Image 2 */}
-          <div className="relative w-full h-60 sm:h-72 md:h-80 overflow-hidden rounded-xl shadow-lg">
+      
+    <div className="relative w-full h-60 sm:h-72 md:h-80 overflow-hidden rounded-xl shadow-lg">
             <Image 
-              src="/img/f2.jpg"
-              alt="Farm Image 2"
+              src="/img/f4.jpg"
+              alt="Farm Image 3"
               fill
               className="object-cover object-center rounded-xl hover:scale-105 transition duration-500"
             />
           </div>
-
           {/* Farm Image 3 */}
           <div className="relative w-full h-60 sm:h-72 md:h-80 overflow-hidden rounded-xl shadow-lg">
             <Image 
-              src="/img/f4.jpg"
-              alt="Farm Image 3"
+              src="/img/f1.webp"
+              alt="Farm Image 2"
               fill
               className="object-cover object-center rounded-xl hover:scale-105 transition duration-500"
             />
@@ -63,8 +63,8 @@ export default function FarmWarehouseSection() {
           {/* Warehouse Image 1 */}
           <div className="relative w-full h-72 sm:h-80 overflow-hidden rounded-xl shadow-lg">
             <Image 
-              src="/img/f3.jpg"
-              alt="Warehouse 1"
+              src="/img/maxresdefault.jpg"
+              alt="Warehouse License 2"
               fill
               className="object-cover object-center rounded-xl hover:scale-105 transition duration-500"
             />
@@ -73,8 +73,8 @@ export default function FarmWarehouseSection() {
           {/* Warehouse Image 2 */}
           <div className="relative w-full h-72 sm:h-80 overflow-hidden rounded-xl shadow-lg">
             <Image 
-              src="/img/f6.png"
-              alt="Warehouse License 2"
+              src="/img/f3.jpg"
+              alt="Warehouse 1"
               fill
               className="object-cover object-center rounded-xl hover:scale-105 transition duration-500"
             />

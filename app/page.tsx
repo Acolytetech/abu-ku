@@ -2,6 +2,7 @@
 
 import FarmWarehouseSection from "@/components/FarmWarehouseSection";
 import GradingSection from "@/components/GradingSection";
+import HeroSlider from "@/components/Hero";
 import ProductSection from "@/components/ProductSection";
 import StockistSection from "@/components/StockistSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -26,51 +27,34 @@ export default function Home() {
   return (
     <main className="py-12">
 
-      {/* Hero Section with Background Image */}
-<motion.section
-  className="relative  max-h-[90vh] h-[70vh] md:h-[90vh] text-center text-white shadow-lg bg-cover bg-no-repeat bg-bottom sm:bg-top bg-fixed  overflow-hidden"
-  style={{ backgroundImage: "url('/img/cardmom banner image.png')", backgroundSize: 'cover'  }}
-  initial="hidden"
-  animate="visible"
-  variants={fadeIn}
->
-  {/* Dark overlay */}
-  <div className="absolute inset-0 bg-black/40"></div>
-
-  {/* Hero content */}
-  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/3  z-10 w-full px-2  sm:px-10">
-    <motion.h1
-      className="text-3xl md:text-6xl font-bold mb-6"
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
-      ABU-KU Agro Farms
-    </motion.h1>
-
-    <motion.p
-      className="text-lg md:text-2xl max-w-3xl mx-auto mb-6"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1, delay: 0.3 }}
-    >
-      Supporting small farmers and delivering high-quality cardamom with centralized storage,
-      processing, and distribution.
-    </motion.p>
-
-    <Link href="/about">
-      <motion.div
-        whileHover={{
-          scale: 1.05,
-          boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.2)",
-        }}
-        className="flex gap-2 mx-auto w-fit bg-white text-green-700 font-bold items-center text-2xl border rounded-full p-4 px-10 transition-all duration-300"
-      >
-        Know More <ArrowRight />
-      </motion.div>
-    </Link>
-  </div>
-</motion.section>
+  <HeroSlider
+        slides={[
+          {
+            title: "ABU-KU Agro Farms",
+            subtitle:
+              "Supporting small farmers and delivering high-quality cardamom with centralized storage and distribution.",
+            buttonLabel: "Know More",
+            buttonLink: "/about",
+            background: "/img/bg-11.jpg",
+          },
+          // {
+          //   title: "Premium Cardamom Processing",
+          //   subtitle:
+          //     "Modern grading, drying, and packaging infrastructure for farmers.",
+          //   buttonLabel: "Contact Us",
+          //   buttonLink: "/contact",
+          //   background: "/img/bg-22.jpg",
+          // },
+          // {
+          //   title: "Empowering Rural Farmers",
+          //   subtitle:
+          //     "Transparent pricing, fair procurement, and quality-driven practices.",
+          //   buttonLabel: "Join Us",
+          //   buttonLink: "/contact",
+          //   background: "/img/f1.webp",
+          // },
+        ]}
+      />
 
 <FarmWarehouseSection/>
      {/* About Section */}
@@ -190,7 +174,7 @@ export default function Home() {
 {/* <img src='/img/badielaichi2.webp' alt='Contact Us' className="hidden md:block md:absolute top-0 right-0 z-1 w-[30%] h-full object-cover rounded-xl mb-8"/> */}
 
         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-green-800">Contact Us</h2>
-     <div className="max-w-4xl mx-auto bg-green-50 p-6 rounded-xl  shadow-md grid gap-6 md:grid-cols-2 relative z-20">
+     <div className="max-w-6xl mx-auto bg-green-50 p-6 rounded-xl  shadow-md grid gap-6 md:grid-cols-2 relative z-20">
   {/* Contact Info */}
   <motion.div
     className="relative text-white text-center items-center flex flex-col justify-center rounded-xl overflow-hidden"
